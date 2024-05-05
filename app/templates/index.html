@@ -1,5 +1,4 @@
-def home_template():
-    return '''
+
     <!doctype html>
     <html lang="en">
     <head>
@@ -101,91 +100,4 @@ def home_template():
       </div>
     </body>
     </html>
-    '''
-
-
-def tribes_template():
-    return '''
-    <!doctype html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Tribes in Germania</title>
-      <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
-      <style>
-        body { font-family: 'Fira Code', monospace; margin: 0; background-color: #222; color: #fff; }
-        .top-nav { background-color: #333; padding: 10px; text-align: center; }
-        .top-nav a { color: #ccc; font-size: 15px; padding: 24px; text-decoration: none; }
-        .header { background-color: #333; padding: 60px; text-align: center; }
-        .header h2 { color: #ddd; font-size: 30px; }
-        #mapContainer {
-            position: relative;
-            width: 100%; /* Adjust based on your actual image size */
-            max-width: 900px; /* Adjust based on your image size */
-            margin: auto;
-        }
-        #map {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .tribe {
-            position: absolute;
-            padding: 5px;
-            color: #B4B4B4;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        .tribe:hover {
-            transform: scale(1.2);
-            color: #ffffff;
-        }
-      </style>
-    </head>
-    <body>
-      <div class="top-nav">
-        <a href="/">Search</a> | <a href="/tribes">Tribes in Germania</a>
-      </div>
-      <div class="header">
-        <h2>Tribes Mentioned By Tacitus</h2>
-        <div id="mapContainer">
-          <img src="{{ url_for('static', filename='map.png') }}" id="map" alt="Tribes of Germania">
-
-          <div class="tribe" style="top: 33%; left: 28%;" data-tribe-name="Chauci">Chauci</div>
-          <div class="tribe" style="top: 38%; left: 32%;" data-tribe-name="Langobards">Langobards</div>
-          <div class="tribe" style="top: 42%; left: 40%;" data-tribe-name="Semnones">Semnones</div>
-          <div class="tribe" style="top: 43%; left: 50%;" data-tribe-name="Vandali">Vandali</div>
-          <div class="tribe" style="top: 32%; left: 60%;" data-tribe-name="Venedi">Venedi</div>
-          <div class="tribe" style="top: 59%; left: 80%;" data-tribe-name="Sarmatia">Sarmatia</div>
-          <div class="tribe" style="top: 53%; left: 59%;" data-tribe-name="Peucini">Peucini</div>
-          <div class="tribe" style="top: 32%; left: 40%;" data-tribe-name="Suevi">Suevi</div>
-          <div class="tribe" style="top: 36%; left: 22%;" data-tribe-name="Frisi">Frisi</div>
-          <div class="tribe" style="top: 45%; left: 25%;" data-tribe-name="Cheruscans">Cheruscans</div>
-          <div class="tribe" style="top: 55%; left: 33%;" data-tribe-name="Fosi">Fosi</div>
-          <div class="tribe" style="top: 15%; left: 30%;" data-tribe-name="Cimbri">Cimbri</div>
-          <div class="tribe" style="top: 60%; left: 39%;" data-tribe-name="Quadi">Quadi</div>
-          <div class="tribe" style="top: 65%; left: 33%;" data-tribe-name="Marcomanni">Marcomanni</div>
-          <div class="tribe" style="top: 70%; left: 26%;" data-tribe-name="Hermonduri">Hermonduri</div>
-          <div class="tribe" style="top: 50%; left: 40%;" data-tribe-name="Gambri">Gambri</div>
-          <div class="tribe" style="top: 53%; left: 48%;" data-tribe-name="Buri">Buri</div>
-
-        </div>
-      </div>
-      <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          document.querySelectorAll('.tribe').forEach(function(tribe) {
-            tribe.addEventListener('click', function() {
-                const tribeName = this.getAttribute('data-tribe-name');
-                window.location.href = `/search?word=${tribeName}`; // Redirect to search with tribe name
-            });
-          });
-        });
-      </script>
-    </body>
-    </html>
-    '''
 
