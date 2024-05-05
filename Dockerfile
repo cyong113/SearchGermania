@@ -10,6 +10,9 @@ COPY requirements.txt .
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Install NLTK data during Docker build
+RUN python -m nltk.downloader punkt
+
 # Copy the rest of your application code
 COPY . .
 
