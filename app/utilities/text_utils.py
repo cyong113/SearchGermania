@@ -1,7 +1,6 @@
 import nltk
 from nltk.tokenize import sent_tokenize
 
-# Download NLTK data
 nltk.download('punkt')
 
 def load_text(file_path):
