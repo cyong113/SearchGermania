@@ -36,7 +36,28 @@
             width: auto;
             transition: background-color 0.3s ease;
         }
-
+        @media (max-width: 600px) {
+            .top-nav a {
+                font-size: 12px; /* Smaller font size for navigation links */
+                padding: 8px; /* Smaller padding to save space */
+            }
+            h1 {
+                font-size: 20px; /* Smaller font size for the header */
+                margin: 10px 0; /* Less vertical space around the header */
+            }
+            form, #results {
+                width: 90%; /* More width percentage to use screen space effectively */
+            }
+            .question-container {
+                padding: 10px; /* Smaller padding in question containers */
+            }
+            label {
+                font-size: 14px; /* Smaller font size for labels */
+            }
+            input[type="text"], button {
+                font-size: 14px; /* Smaller font size for better fit */
+            }
+        }
     </style>
 </head>
 <body>

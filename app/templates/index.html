@@ -36,66 +36,64 @@
             color: #ddd; 
             font-size: 30px; 
         }
-        .content { 
-            padding: 20px; 
-        }
-        .content ul li { 
-            padding: 5px 10px; 
-            display: inline-block;
-            margin-right: 10px; 
-            margin-bottom: 15px;
-            background: #333; 
-            border-radius: 6px;
+        form {
+            display: flex; /* Use Flexbox */
+            justify-content: center; /* Center align form contents */
+            flex-wrap: wrap; /* Allow items to wrap */
+            gap: 10px; /* Spacing between elements */
         }
         input[type="text"], button {
             padding: 10px;
-            margin: 5px 0;
+            margin-top: 5px; /* Small top margin for better alignment */
             border-radius: 12px;
             border: 1px solid #ccc;
             font-size: 16px;
-            width: auto;
             transition: background-color 0.3s ease;
         }
         input[type="text"] {
-            flex-grow: 1;
-            margin-right: 10px;
+            flex-grow: 1; /* Allows the input to grow */
+            max-width: calc(100% - 120px); /* Adjust max width to allow button fitting */
         }
         button {
             cursor: pointer;
             background-color: #444;
             color: white;
             border: none;
+            width: 110px; /* Fixed width for the button */
         }
         button:hover, button:focus {
             background-color: #555;
         }
-        input[type="text"]:focus {
-            border-color: #666;
-            outline: none;
+        .content {
+            padding: 20px;
+        }
+        .content ul li {
+            padding: 5px 10px;
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 15px;
+            background: #333;
+            border-radius: 6px;
         }
         @media (max-width: 600px) {
             .top-nav a {
-                font-size: 12px; /* Smaller font size for navigation links */
-                padding: 6px; /* Smaller padding to save space */
+                font-size: 12px;
+                padding: 6px;
             }
-            h1 {
-                font-size: 20px; /* Smaller font size for the header */
-                margin: 10px 0; /* Less vertical space around the header */
+            .header {
+                padding: 20px;
             }
-            form, #results {
-                width: 90%; /* More width percentage to use screen space effectively */
+            .header h1 {
+                font-size: 24px;
             }
-            .question-container {
-                padding: 10px; /* Smaller padding in question containers */
+            input[type="text"] {
+                max-width: 100%; /* Allows the input to fill available space */
             }
-            label {
-                font-size: 14px; /* Smaller font size for labels */
-            }
-            input[type="text"], button {
-                font-size: 14px; /* Smaller font size for better fit */
+            button {
+                width: 100%; /* Full width button in very small screens */
             }
         }
-      </style>
+    </style>
     </head>
     <body>
       <div class="top-nav">
