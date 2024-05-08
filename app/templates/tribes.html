@@ -10,7 +10,7 @@
     <style>
         body { font-family: 'Fira Code', monospace; margin: 0; background-color: #222; color: #fff; }
         .top-nav { background-color: #333; padding: 10px; text-align: center; }
-        .top-nav a { color: #ccc; font-size: 15px; padding: 24px; text-decoration: none; }
+        .top-nav a { color: #ccc; font-size: 15px; padding: 10px; text-decoration: none; }
         .header { background-color: #333; padding: 60px; text-align: center; }
         .header h2 { color: #ddd; font-size: 30px; }
         #mapContainer {
@@ -37,17 +37,22 @@
             color: #ffffff;
         }
         @media (max-width: 600px) {
+            .top-nav a {
+                font-size: 12px; /* Reduced font size for better fit */
+                padding: 6px; /* Reduced padding to save space */
+            }
             .tribe {
-                font-size: 2vw; /* Smaller font size for the tribe elements */
+                font-size: 2vw;
             }
             .header {
-                padding: 20px; /* Reduced padding to save space */
+                padding: 20px; /* Reduced padding */
             }
             .header h2 {
-                font-size: 18px; /* Smaller font size for the title */
+                font-size: 18px; /* Adjusted font size for header */
             }
         }
     </style>
+    
 </head>
 <body>
     <div class="top-nav">
