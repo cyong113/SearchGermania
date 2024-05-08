@@ -74,17 +74,27 @@
             outline: none;
         }
         @media (max-width: 600px) {
-        .top-nav a {
-            font-size: 12px; /* Smaller font size for navigation links */
-            padding: 6px; /* Smaller padding to save space */
+            .top-nav a {
+                font-size: 12px; /* Smaller font size for navigation links */
+                padding: 6px; /* Smaller padding to save space */
+            }
+            h1 {
+                font-size: 20px; /* Smaller font size for the header */
+                margin: 10px 0; /* Less vertical space around the header */
+            }
+            form, #results {
+                width: 90%; /* More width percentage to use screen space effectively */
+            }
+            .question-container {
+                padding: 10px; /* Smaller padding in question containers */
+            }
+            label {
+                font-size: 14px; /* Smaller font size for labels */
+            }
+            input[type="text"], button {
+                font-size: 14px; /* Smaller font size for better fit */
+            }
         }
-        .header {
-            padding: 20px; /* Reduced padding for the header on mobile */
-        }
-        .header h1 {
-            font-size: 24px; /* Smaller font size for the header title */
-        }
-    }
       </style>
     </head>
     <body>
