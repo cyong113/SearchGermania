@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Germania Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Fira Code', monospace; margin: 0; background-color: #222; color: #fff; }
+        .top-nav { background-color: #333; padding: 10px; text-align: center; }
+        .top-nav a { color: #ccc; font-size: 15px; padding: 24px; text-decoration: none; }
+        h1 { text-align: center; color: #ddd; }
+        form, #results { width: 60%; margin: 20px auto; }
+        label { color: #ccc; margin: 10px 0; display: block; font-weight: 300; font-size: 18px}
+        button { cursor: pointer; background-color: #444; color: white; border: none; padding: 10px; }
+        button:hover { background-color: #555; }
+        .question-container {
+        margin-bottom: 20px;
+        background-color: #333; 
+        padding: 15px;
+        border-radius: 9px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.3); 
+
+        }
+        .question-container label {
+            font-weight: bold;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        input[type="text"], button {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 12px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            width: auto;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="/">Search</a> | <a href="/tribes">Tribes in Germania</a> | <a href="/quiz">Quiz</a>
+    </div>
+    <h1>Germania Quiz</h1>
+    <form method="POST" action="/submit_quiz">
+        <div class="question-container">
+            <label>1. Who wrote 'Germania'?</label>
+            <input type="radio" name="answer1" value="Tacitus" required> Tacitus<br>
+            <input type="radio" name="answer1" value="Pliny" required> Pliny<br>
+            <input type="radio" name="answer1" value="Caesar" required> Caesar<br>
+        </div>
+        <div class="question-container">
+            <label>2. What year was 'Germania' written?</label>
+            <input type="radio" name="answer2" value="98 AD" required> 98 AD<br>
+            <input type="radio" name="answer2" value="150 AD" required> 150 AD<br>
+            <input type="radio" name="answer2" value="200 AD" required> 200 AD<br>
+        </div>
+        <div class="question-container">
+            <label>3. What rivers separate Germany from Gaul, Rhoetia, and Pannonia?</label>
+            <input type="radio" name="answer3" value="Danube and Rhone" required> Danube and Rhone<br>
+            <input type="radio" name="answer3" value="Rhine and Danube" required> Rhine and Danube<br>
+            <input type="radio" name="answer3" value="Elbe and Rhine" required> Elbe and Rhine<br>
+        </div>
+        <div class="question-container">
+            <label>4. From which mountains does the Rhine river rise?</label>
+            <input type="radio" name="answer4" value="Black Forest" required> Black Forest<br>
+            <input type="radio" name="answer4" value="Vosges Mountains" required> Vosges Mountains<br>
+            <input type="radio" name="answer4" value="Rhoetian Alps" required> Rhoetian Alps<br>
+        </div>
+        <div class="question-container">
+            <label>5. What ocean does the Rhine flow into?</label>
+            <input type="radio" name="answer5" value="Baltic Sea" required> Baltic Sea<br>
+            <input type="radio" name="answer5" value="Black Sea" required> Black Sea<br>
+            <input type="radio" name="answer5" value="North Sea" required> North Sea<br>
+        </div>
+        <div class="question-container">
+            <label>6. Who are considered the fathers and founders of the German nation according to their ancient ballads?</label>
+            <input type="radio" name="answer6" value="Tuisto and Mannus" required> Tuisto and Mannus<br>
+            <input type="radio" name="answer6" value="Odin and Thor" required> Odin and Thor<br>
+            <input type="radio" name="answer6" value="Romulus and Remus" required> Romulus and Remus<br>
+        </div>
+        <div class="question-container">
+            <label>7. Which group of people is said to have expelled the Gauls and initially been called 'Germans'?</label>
+            <input type="radio" name="answer7" value="Tungrians" required> Tungrians<br>
+            <input type="radio" name="answer7" value="Teutons" required> Teutons<br>
+            <input type="radio" name="answer7" value="Visigoths" required> Visigoths<br>
+        </div>
+        <div class="question-container">
+            <label>8. What is said to ennoble the Langobards according to the text?</label>
+            <input type="radio" name="answer8" value="Their large population and wealth" required> Their large population and wealth<br>
+            <input type="radio" name="answer8" value="Their numerous peaceful negotiations with the northern tribes" required> Their numerous peaceful negotiations with the northern tribes<br>
+            <input type="radio" name="answer8" value="The smallness of their number and their prowess in battle" required> The smallness of their number and their prowess in battle<br>
+        </div>
+        
+        <div class="question-container">
+            <label>9. How do the Sarmatians differ from the Germans according to the text?</label>
+            <input type="radio" name="answer9" value="The Sarmatians use large and flowing vests, unlike the closely girt vests of the Germans" required> The Sarmatians use large and flowing vests, unlike the closely girt vests of the Germans<br>
+            <input type="radio" name="answer9" value="The Sarmatians are primarily foot soldiers, unlike the mounted Germans" required> The Sarmatians are primarily foot soldiers, unlike the mounted Germans<br>
+            <input type="radio" name="answer9" value="The Sarmatians use large and flowing vests, unlike the closely girt vests of the Germans" required> The Sarmatians use large and flowing vests, unlike the closely girt vests of the Germans<br>
+        </div>
+
+        <div class="question-container">
+            <label>10. Which deity is most worshipped by the ancient Germans?</label>
+            <input type="radio" name="answer10" value="Mercury" required> Mercury<br>
+            <input type="radio" name="answer10" value="Jupiter" required> Jupiter<br>
+            <input type="radio" name="answer10" value="Mars" required> Mars<br>
+        </div>
+        
+        <input type="text" name="nickname" placeholder="Enter your nickname" required>
+        <button type="submit" style="padding: 10px; cursor: pointer; background-color: #444; color: white; border: none; border-radius: 12px;">Submit Quiz</button>
+    </form>
+    
+</body>
+</html>

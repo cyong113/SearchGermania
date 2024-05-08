@@ -40,8 +40,8 @@
 </head>
 <body>
     <div class="top-nav">
-        <a href="/">Search</a> | <a href="/tribes">Tribes in Germania</a>
-    </div>
+        <a href="/search">Search</a> | <a href="/">Tribes in Germania</a> | <a href="/quiz">Quiz</a>
+    </div>    
     <div class="header">
         <h2>Tribes Mentioned By Tacitus</h2>
         <div id="mapContainer">
@@ -70,7 +70,7 @@
             document.querySelectorAll('.tribe').forEach(function(tribe) {
                 tribe.addEventListener('click', function() {
                     const tribeName = this.getAttribute('data-tribe-name');
-                    window.location.href = `/search?word=${tribeName}`; // Redirect to search with tribe name
+                    window.location.href = `/search?word=${tribeName}`; 
                 });
             });
         });
