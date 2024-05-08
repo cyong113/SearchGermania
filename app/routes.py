@@ -18,7 +18,6 @@ quiz_questions = [
     {"question": "Which deity is most worshipped by the ancient Germans?", "choices": ["Mercury", "Jupiter", "Mars"], "answer": "Mercury"}
 ]
 
-
 leaderboard = []
 
 @main.route('/quiz')
