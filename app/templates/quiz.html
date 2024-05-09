@@ -11,7 +11,7 @@
         body { font-family: 'Fira Code', monospace; margin: 0; background-color: #222; color: #fff; }
         .top-nav { background-color: #333; padding: 10px; text-align: center; }
         .top-nav a { color: #ccc; font-size: 15px; padding: 24px; text-decoration: none; }
-        h1 { text-align: center; color: #ddd; font-size: 24px; } /* Adjusted font size for consistency */
+        h1 { text-align: center; color: #ddd; font-size: 30px; margin-top: 90px;} /* Adjusted font size for consistency */
         form, #results { width: 60%; margin: 20px auto; } /* Increased width for better fill */
         label { color: #fff; margin: 10px 0; display: block; font-weight: 300; font-size: 18px; }
         button { cursor: pointer; background-color: #444; color: white; border: none; padding: 10px; }
@@ -36,6 +36,9 @@
             transition: background-color 0.3s ease;
             
         }
+        .wrapper {
+            text-align: center;
+        }
 
         @media (max-width: 600px) {
             .top-nav a {
@@ -58,10 +61,12 @@
             }
             input[type="text"], button {
                 font-size: 14px;  /* Smaller font size for inputs and buttons */
-                width: auto;  /* Ensure width is automatically adjusted */
+                text-align: center;
+                width: 90%;  /* Ensure width is automatically adjusted */
+
             }
             button {
-                width: auto;  /* Auto width for buttons to prevent overflow */
+                width: 95%;  /* Auto width for buttons to prevent overflow */
             }
         }
 
@@ -135,9 +140,10 @@
             <input type="radio" name="answer10" value="Jupiter" required> Jupiter<br>
             <input type="radio" name="answer10" value="Mars" required> Mars<br>
         </div>
-        
-        <input type="text" name="nickname" placeholder="Enter your nickname" required>
-        <button type="submit" style="padding: 10px; cursor: pointer; background-color: #444; color: white; border: none; border-radius: 12px;">Submit Quiz</button>
+        <div class = "wrapper">
+            <input type="text" name="nickname" placeholder="Enter your nickname" required>
+            <button type="submit" style="padding: 10px; cursor: pointer; background-color: #444; color: white; border: none; border-radius: 12px;">Submit Quiz</button>
+        </div>
     </form>
     
 </body>
