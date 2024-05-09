@@ -10,7 +10,7 @@
         .top-nav a { color: #ccc; font-size: 15px; padding: 24px; text-decoration: none; }
         h1 { text-align: center; color: #ddd; font-size: 24px; } /* Adjusted font size for consistency */
         form, #results { width: 80%; margin: 20px auto; } /* Increased width for better fill */
-        label { color: #ccc; margin: 10px 0; display: block; font-weight: 300; font-size: 18px; }
+        label { color: #fff; margin: 10px 0; display: block; font-weight: 300; font-size: 18px; }
         button { cursor: pointer; background-color: #444; color: white; border: none; padding: 10px; }
         button:hover { background-color: #555; }
         .question-container {
@@ -18,10 +18,11 @@
             background-color: #333;
             padding: 15px;
             border-radius: 9px;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+            /* box-shadow: 0 3px 6px rgba(0,0,0,0.3); */
         }
         .question-container label { font-weight: bold; }
-        input[type="radio"] { margin-right: 5px; }
+        input[type="radio"] { margin-right: 9px; margin-left: 9px; accent-color: #000000;}
+
         input[type="text"], button {
             padding: 10px;
             margin: 5px 0;
@@ -30,14 +31,22 @@
             font-size: 16px;
             width: auto;
             transition: background-color 0.3s ease;
+            
         }
+
         @media (max-width: 600px) {
-            .top-nav a { font-size: 12px; padding: 8px; }
+            .top-nav a { font-size: 12px; padding: 6px; }
             h1 { font-size: 20px; margin: 10px 0; }
-            form, #results { width: 95%; } /* Slightly wider on small screens */
+            form, #results { width: 90%; } /* Slightly wider on small screens */
             .question-container { padding: 10px; }
             label { font-size: 14px; }
-            input[type="text"], button { font-size: 14px; }
+
+            input[type="text"] {
+                width: 95%; /* Allows the input to fill available space */
+            }
+            button {
+                width: 100%; /* Full width button in very small screens */
+            }
         }
     </style>
 </head>
