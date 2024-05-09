@@ -43,8 +43,10 @@
             text-align: center;
         }
         .spaced-h2 {
-            margin-top: 50px; /* Adjust to desired space */
-            margin-bottom: 50px; /* Adjust to desired space */
+            margin-top: 60px; /* Adjust to desired space */
+            margin-bottom: 60px; /* Adjust to desired space */
+            margin-left: 36px;
+            margin-right: 36px;
         }
         .entry {
             display: flex; 
@@ -89,8 +91,10 @@
     <div class="header">
         <h1>Quiz Results</h1>
     </div>
-    <div class="centered-content">
-        <h2 class = "spaced-h2">Thanks for participating, {{ nickname_temp }}! You scored {{ score_temp }} points</h2>
+    <div class="spaced-h2">
+        <h2 class = "centered-content">Thanks for participating, {{ nickname_temp }}!</h2>
+
+        <h2 class = "centered-content">You scored {{ score_temp }} points</h2>
     </div>
     <div class="centered-content">
         <h3>Leaderboard</h3>
