@@ -2,18 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Quiz Results</title>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Fira Code', monospace; margin: 0; background-color: #222; color: #fff; }
-        .top-nav { background-color: #333; padding: 10px; text-align: center; }
-        .top-nav a { color: #ccc; font-size: 15px; padding: 24px; text-decoration: none; }
-        h1 { text-align: center; color: #ddd; font-size: 30px; margin-top: 90px; } 
-        h2 { text-align: center; margin-top: 99px; }
-        h3 { text-align: center; margin-top: 99px; }
+        body { 
+            font-family: 'Fira Code', monospace; 
+            margin: 0; 
+            background-color: #222; 
+            color: #fff; 
+            overflow-x: hidden; 
+        }
+        .top-nav { 
+            background-color: #333; 
+            padding: 10px; 
+            text-align: center; 
+        }
+        .top-nav a { 
+            color: #ccc; 
+            font-size: 15px; 
+            padding: 24px; 
+            text-decoration: none; 
+        }
+        .header { 
+            background-color: #333; 
+            padding: 60px; 
+            text-align: center; 
+        }
+        .header h1 { 
+            color: #ddd; 
+            font-size: 30px; 
+        }
         .leaderboard {
             width: 300px; 
             margin: 20px auto; 
@@ -38,24 +58,27 @@
         .entry div:first-child { flex: 0.2; } 
         .entry div:nth-child(2) { flex: 0.9; }
         .entry div:last-child { flex: 0.2; } 
-        .spaced-text {
-            margin-bottom: 18px;
+        @media (max-width: 600px) {
+            .top-nav a {
+                font-size: 12px;
+                padding: 6px;
+            }
+            .header {
+                padding: 20px;
+            }
+            .header h1 {
+                font-size: 20px;
+            }
         }
-        /* @media (max-width: 600px) {
-            h1 {
-                font-size: 25px;
-            }
-            h2 {
-                font-size: 18px;
-            }
-        } */
     </style>
 </head>
 <body>
     <div class="top-nav">
         <a href="/">Search</a> | <a href="/tribes">Tribes in Germania</a> | <a href="/quiz">Quiz</a>
     </div>
-    <h1>Quiz Results</h1>
+    <div class="header">
+        <h1>Quiz Results</h1>
+    </div>
     <h2 class="spaced-text">Thanks for participating, {{ nickname_temp }}! You scored {{ score_temp }} points</h2>
     <h3>Leaderboard</h3>
     <div class="leaderboard">
