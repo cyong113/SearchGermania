@@ -38,7 +38,6 @@
         .spaced-text {
             margin-bottom: 18px;
         }
-
     </style>
 </head>
 <body>
@@ -46,14 +45,14 @@
         <a href="/">Search</a> | <a href="/tribes">Tribes in Germania</a> | <a href="/quiz">Quiz</a>
     </div>
     <h1>Quiz Results</h1>
-    <h2 class = "spaced-text">Thanks for participating, {{ nickname }}! You scored {{ score }} points</h2>
+    <h2 class="spaced-text">Thanks for participating, {{ nickname_temp }}! You scored {{ score_temp }} points</h2>
     <h3>Leaderboard</h3>
     <div class="leaderboard">
         {% for entry in leaderboard %}
         <div class="entry">
             <div>{{ loop.index }}</div>
-            <div>{{ entry[0] }}</div>
-            <div>{{ entry[1] }} points</div>
+            <div>{{ entry.nickname }}</div>
+            <div>{{ entry.score }} points</div>
         </div>
         {% endfor %}
     </div>

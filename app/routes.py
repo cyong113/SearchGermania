@@ -26,28 +26,37 @@ def quiz():
 
 @main.route('/submit_quiz', methods=['POST'])
 def submit_quiz():
+    from . import db, QuizResult
     nickname = request.form['nickname']
     score = 0
     for i in range(1, len(quiz_questions) + 1):
         user_answer = request.form.get(f'answer{i}')
-        correct_answer = quiz_questions[i-1]['answer']
+        correct_answer = quiz_questions[i - 1]['answer']
         if user_answer == correct_answer:
             score += 1
-    # Add score to leaderboard (or use a database to save scores)
-    leaderboard.append((nickname, score))
-    leaderboard.sort(key=lambda x: x[1], reverse=True)
-    # Store score in session or pass directly to template
-    session['nickname'] = nickname
-    session['score'] = score
+
+    new_result = QuizResult(nickname=nickname, score=score)
+    db.session.add(new_result)
+    db.session.commit()
+
+    session['nickname_temp'] = nickname
+    session['score_temp'] = score
+    session.modified = True  # This line ensures that Flask knows the session has been modified
+
     return redirect(url_for('main.quiz_results'))
+
 
 
 @main.route('/quiz_results')
 def quiz_results():
-    # Retrieve score from session if not passing directly
-    nickname = session.get('nickname', 'Unknown')
-    score = session.get('score', 0)
-    return render_template('quiz_results.html', nickname=nickname, score=score, leaderboard=leaderboard)
+    from . import db, QuizResult
+    leaderboard = QuizResult.query.order_by(QuizResult.score.desc()).all()
+
+    nickname_temp = session.get('nickname_temp', 'Participant')  # Updated variable name
+    score_temp = session.get('score_temp', 0)  # Updated variable name
+
+    return render_template('quiz_results.html', leaderboard=leaderboard , nickname_temp=nickname_temp, score_temp=score_temp)
+
 
 
 @main.route('/tribes')
