@@ -14,6 +14,9 @@
             color: #fff; 
             overflow-x: hidden; 
         }
+        .centered-content {
+            text-align: center;
+        }
         .top-nav { 
             background-color: #333; 
             padding: 10px; 
@@ -39,13 +42,17 @@
             margin: 20px auto; 
             text-align: center;
         }
+        .spaced-h2 {
+            margin-top: 50px; /* Adjust to desired space */
+            margin-bottom: 50px; /* Adjust to desired space */
+        }
         .entry {
             display: flex; 
             justify-content: space-between; 
             background-color: #333;
             margin-bottom: 9px; 
             border-radius: 9px;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.3); 
+            /* box-shadow: 0 3px 6px rgba(0,0,0,0.3);  */
         }
         .entry div {
             padding: 10px;
@@ -69,6 +76,9 @@
             .header h1 {
                 font-size: 20px;
             }
+            h2 {
+                font-size: 18px; /* Smaller font size for h2 when the screen is ≤ 600px */
+            }
         }
     </style>
 </head>
@@ -79,8 +89,12 @@
     <div class="header">
         <h1>Quiz Results</h1>
     </div>
-    <h2 class="spaced-text">Thanks for participating, {{ nickname_temp }}! You scored {{ score_temp }} points</h2>
-    <h3>Leaderboard</h3>
+    <div class="centered-content">
+        <h2 class = "spaced-h2">Thanks for participating, {{ nickname_temp }}! You scored {{ score_temp }} points</h2>
+    </div>
+    <div class="centered-content">
+        <h3>Leaderboard</h3>
+    </div>
     <div class="leaderboard">
         {% for entry in leaderboard %}
         <div class="entry">
