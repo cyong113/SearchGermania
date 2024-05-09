@@ -8,25 +8,20 @@
         body { font-family: 'Fira Code', monospace; margin: 0; background-color: #222; color: #fff; }
         .top-nav { background-color: #333; padding: 10px; text-align: center; }
         .top-nav a { color: #ccc; font-size: 15px; padding: 24px; text-decoration: none; }
-        h1 { text-align: center; color: #ddd; }
-        form, #results { width: 60%; margin: 20px auto; }
-        label { color: #ccc; margin: 10px 0; display: block; font-weight: 300; font-size: 18px}
+        h1 { text-align: center; color: #ddd; font-size: 24px; } /* Adjusted font size for consistency */
+        form, #results { width: 80%; margin: 20px auto; } /* Increased width for better fill */
+        label { color: #ccc; margin: 10px 0; display: block; font-weight: 300; font-size: 18px; }
         button { cursor: pointer; background-color: #444; color: white; border: none; padding: 10px; }
         button:hover { background-color: #555; }
         .question-container {
-        margin-bottom: 20px;
-        background-color: #333; 
-        padding: 15px;
-        border-radius: 9px;
-        box-shadow: 0 3px 6px rgba(0,0,0,0.3); 
-
+            margin-bottom: 20px;
+            background-color: #333;
+            padding: 15px;
+            border-radius: 9px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.3);
         }
-        .question-container label {
-            font-weight: bold;
-        }
-        input[type="radio"] {
-            margin-right: 5px;
-        }
+        .question-container label { font-weight: bold; }
+        input[type="radio"] { margin-right: 5px; }
         input[type="text"], button {
             padding: 10px;
             margin: 5px 0;
@@ -37,26 +32,12 @@
             transition: background-color 0.3s ease;
         }
         @media (max-width: 600px) {
-            .top-nav a {
-                font-size: 12px; /* Smaller font size for navigation links */
-                padding: 8px; /* Smaller padding to save space */
-            }
-            h1 {
-                font-size: 20px; /* Smaller font size for the header */
-                margin: 10px 0; /* Less vertical space around the header */
-            }
-            form, #results {
-                width: 90%; /* More width percentage to use screen space effectively */
-            }
-            .question-container {
-                padding: 10px; /* Smaller padding in question containers */
-            }
-            label {
-                font-size: 14px; /* Smaller font size for labels */
-            }
-            input[type="text"], button {
-                font-size: 14px; /* Smaller font size for better fit */
-            }
+            .top-nav a { font-size: 12px; padding: 8px; }
+            h1 { font-size: 20px; margin: 10px 0; }
+            form, #results { width: 95%; } /* Slightly wider on small screens */
+            .question-container { padding: 10px; }
+            label { font-size: 14px; }
+            input[type="text"], button { font-size: 14px; }
         }
     </style>
 </head>
