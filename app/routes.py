@@ -45,8 +45,6 @@ def submit_quiz():
 
     return redirect(url_for('main.quiz_results'))
 
-
-
 @main.route('/quiz_results')
 def quiz_results():
     from . import db, QuizResult
@@ -56,8 +54,6 @@ def quiz_results():
     score_temp = session.get('score_temp', 0)  # Updated variable name
 
     return render_template('quiz_results.html', leaderboard=leaderboard , nickname_temp=nickname_temp, score_temp=score_temp)
-
-
 
 @main.route('/tribes')
 def tribes():
